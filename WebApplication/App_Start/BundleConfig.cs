@@ -53,7 +53,9 @@ namespace WebApplication
                 "~/Scripts/app/editor.index.js"
                 ));
 
-            bundles.Add(new StyleBundle("~/Content/editor").Include("~/Content/app/editor.index.css"));
+            bundles.Add(new StyleBundle("~/Content/editor").Include(
+                "~/Content/app/editor.index.css",
+                "~/Content/app/editor.index.print.css"));
 
             #endregion
         }

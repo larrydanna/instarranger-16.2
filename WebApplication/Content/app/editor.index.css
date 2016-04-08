@@ -6,20 +6,6 @@
 
 */
 
-@media all {
-	.page-break	{ display: none; }
-}
-
-@media print {
-	.page-break	{ display: block; page-break-before: always; }
-
-    #divInput {
-        visibility: hidden;
-        display: none;
-    }
-
-}
-
 #divInput > #input {
     width: 3in;
     height: 8in;
@@ -38,7 +24,7 @@
 }
 
 #divTemplate {
-    visibility: hidden;
+    display: none;
 }
 
 .song {

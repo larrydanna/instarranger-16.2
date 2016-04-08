@@ -1,0 +1,106 @@
+﻿/*          ___ __             _           __         
+  ___  ____/ (_) /_____  _____(_)___  ____/ /__  _  __
+ / _ \/ __  / / __/ __ \/ ___/ / __ \/ __  / _ \| |/_/
+/  __/ /_/ / / /_/ /_/ / /  / / / / / /_/ /  __/>  <  
+\___/\__,_/_/\__/\____/_(_)/_/_/ /_/\__,_/\___/_/|_|  
+
+*/
+
+@media all {
+	.page-break	{ display: none; }
+}
+
+@media print {
+	.page-break	{ display: block; page-break-before: always; }
+
+    #divInput {
+        visibility: hidden;
+        display: none;
+    }
+
+}
+
+#divInput > #input {
+    width: 3in;
+    height: 8in;
+}
+
+#divInput {
+    float: left;
+    /*border: 1px solid black;*/
+    padding-top: 1in;
+}
+
+#divOutput {
+    float: left;
+    padding: 2em;
+    width: 800px;
+}
+
+#divTemplate {
+    visibility: hidden;
+}
+
+.song {
+    font-family: monospace;
+}
+
+.song-header {
+    /*border: 3px solid black;*/
+}
+
+.song-header-title {
+    /*border: 1px solid green;*/
+    font-family: sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.song-header-key, .song-header-time, .song-header-tempo {
+    /*border: 1px solid aqua;*/
+    float: left;
+    width: 33%;
+    font-size: 2.5em;
+}
+
+.song-header-time {
+    /*border: 1px solid blueviolet;*/
+    text-align: center;
+}
+
+.song-header-tempo {
+    /*border: 1px solid darkorange;*/
+    text-align: right;
+}
+
+.song-header-clear {
+    clear: both;
+}
+
+.song-sections {
+    border: 1px solid black;
+    font-size: 16pt;
+    padding: 20px;
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+}
+
+.song-sections-stanza {
+    /*border: 1px solid green;*/
+    padding-bottom: 30px;
+}
+
+.song-sections-stanza-line {
+    /*border: 1px solid yellow;*/
+}
+
+.song-sections-stanza-label {
+    /*border: 1px solid red;*/
+}
+
+.song-sections-stanza-measure {
+    /*border: 1px solid lightcoral;*/
+    padding-right: 15px;
+    padding-left: 15px;
+}

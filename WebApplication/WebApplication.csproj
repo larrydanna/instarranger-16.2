@@ -241,6 +241,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="ScreenShots\160410a-instArranger-ScreenShot.PNG" />
     <Content Include="Scripts\app\editor.helper.js" />
     <Content Include="Scripts\app\editor.index.js" />
     <Content Include="Scripts\app\Formatter.js" />

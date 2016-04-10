@@ -7,6 +7,10 @@
                  /____/                                                                             
 */
 
+String.prototype.toTitleCase = function() {
+    return this.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
+};
+
 function SongFormatterHtml(data) {
 
     var sections = [];
@@ -20,14 +24,16 @@ function SongFormatterHtml(data) {
         Stanza: "{stanza}",
         Label: "{label}",
         Line: "{line}",
-        Measure: "{measure}"
+        Measure: "{measure}",
+        Notes: "{notes}"
     };
 
     var fieldNames = {
         Title: "title",
         Key: "key",
         Time: "time",
-        Tempo: "tempo"
+        Tempo: "tempo",
+        Notes: "notes"
     };
 
     var parseData = function (data) {
@@ -41,24 +47,25 @@ function SongFormatterHtml(data) {
     }(data);
 
     var findSection = function (search) {
-        var retVal = sections.find(i => i.toLowerCase().indexOf(search) === 0) || "&nbsp;";
+        var retVal = sections.find(i => i.toLowerCase().indexOf(search) === 0) || "";
 
         return retVal.replace(/title: /i, "");
     };
 
-    var getFormattedOutput = function (template, title, key, time, tempo, arrangement) {
+    var getFormattedOutput = function (template, title, key, time, tempo, notes, arrangement) {
         var retVal = template
-            .replace(tokens.Title, title)
-            .replace(tokens.Key, key)
-            .replace(tokens.Time, time)
-            .replace(tokens.Tempo, tempo)
+            .replace(tokens.Title, title.toTitleCase())
+            .replace(tokens.Key, key.toTitleCase())
+            .replace(tokens.Time, time.toTitleCase())
+            .replace(tokens.Tempo, tempo.toTitleCase())
+            .replace(tokens.Notes, notes)
             .replace(tokens.Arrangement, arrangement);
 
         return retVal;
     };
 
     var isSpecial = function (data) {
-        var list = ["title", "key", "tempo", "time"];
+        var list = ["title", "key", "tempo", "time","notes"];
 
         var retVal = list.some(i => data.toLowerCase().indexOf(i) === 0);
 
@@ -103,7 +110,7 @@ function SongFormatterHtml(data) {
 
         var label = lines.shift();
 
-        var labelFormatted = getFormattedStanzaLabel(label);
+        var labelFormatted = getFormattedStanzaLabel(label.toTitleCase());
 
         var linesFormatted = lines.map(l => getFormattedStanzaLine(l));
 
@@ -128,9 +135,10 @@ function SongFormatterHtml(data) {
         var key = findSection(fieldNames.Key);
         var time = findSection(fieldNames.Time);
         var tempo = findSection(fieldNames.Tempo);
+        var notes = findSection(fieldNames.Notes);
         var arrangement = getArrangement();
 
-        var result = getFormattedOutput(template, title, key, time, tempo, arrangement);
+        var result = getFormattedOutput(template, title, key, time, tempo, notes, arrangement);
 
         return result;
     };

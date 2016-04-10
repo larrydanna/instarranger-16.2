@@ -7,14 +7,13 @@
 */
 
 #divInput > #input {
-    width: 3in;
-    height: 8in;
+    height: 800px;
 }
 
 #divInput {
     float: left;
     /*border: 1px solid black;*/
-    padding-top: 1in;
+    padding-top: 60px;
 }
 
 #divOutput {
@@ -28,25 +27,24 @@
 }
 
 .song {
-    font-family: monospace;
+    font-family: "Droid Sans", sans-serif;
 }
 
-.song-header {
-    /*border: 3px solid black;*/
-}
+/*.song-header {
+    border: 3px solid black;
+}*/
 
 .song-header-title {
     /*border: 1px solid green;*/
-    font-family: sans-serif;
-    font-size: 2.5em;
-    font-weight: bold;
+    font-size: 21pt;
+    margin-bottom: 10px;
 }
 
 .song-header-key, .song-header-time, .song-header-tempo {
     /*border: 1px solid aqua;*/
+    font-size: 16pt;
+    width: 32.9%;
     float: left;
-    width: 33%;
-    font-size: 2.5em;
 }
 
 .song-header-time {
@@ -61,32 +59,53 @@
 
 .song-header-clear {
     clear: both;
+    height: 0;
 }
 
 .song-sections {
     border: 1px solid black;
-    font-size: 16pt;
     padding: 20px;
+    font-size: 13pt;
     -webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
+    -ms-column-count: 2;
+    -o-column-count: 2;
     column-count: 2;
 }
 
 .song-sections-stanza {
     /*border: 1px solid green;*/
     padding-bottom: 30px;
+    -webkit-column-break-inside: avoid;
+    -moz-page-break-inside: avoid;
+    page-break-inside: avoid;
+    -webkit-break-inside: avoid;
+    -moz-break-inside: avoid;
+    -ms-break-inside: avoid;
+    -o-break-inside: avoid;
+    break-inside: avoid;
 }
 
-.song-sections-stanza-line {
-    /*border: 1px solid yellow;*/
-}
+/*.song-sections-stanza-line {
+    border: 1px solid yellow;
+}*/
 
 .song-sections-stanza-label {
     /*border: 1px solid red;*/
+    font-weight: bolder;
 }
 
 .song-sections-stanza-measure {
     /*border: 1px solid lightcoral;*/
-    padding-right: 15px;
-    padding-left: 15px;
+    margin-right: 15px;
+    font-family: "Cutive Mono", cursive;
+    font-size: 18pt;
+    display: inline-block;
+    min-width: 30px;
+}
+
+.song-notes {
+    padding: 20px;
+    font-size: 16pt;
+    font-family: "Coming Soon", cursive;
 }

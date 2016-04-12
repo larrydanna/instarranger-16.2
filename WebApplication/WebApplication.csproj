@@ -244,9 +244,15 @@
     <Content Include="ScreenShots\160410a-instArranger-ScreenShot.PNG" />
     <Content Include="Scripts\app\editor.helper.js" />
     <Content Include="Scripts\app\editor.index.js" />
-    <Content Include="Scripts\app\Formatter.js" />
+    <Content Include="Scripts\app\FieldsExtractor.js" />
     <Content Include="Scripts\app\Song.js" />
-    <Content Include="Scripts\app\SongFormatterHtml.js" />
+    <Content Include="Scripts\app\SongFormatter.js" />
+    <Content Include="Scripts\app\SongTemplateHtml.js" />
+    <Content Include="Scripts\app\StanzaExtractor.js" />
+    <Content Include="Scripts\app\StanzaFormatter.js" />
+    <Content Include="Scripts\app\StanzaLineFormatter.js" />
+    <Content Include="Scripts\app\StanzaMeasureFormatter.js" />
+    <Content Include="Scripts\app\StringExtensions.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -327,7 +333,6 @@
     <Content Include="Views\Editor\Index.cshtml" />
     <Content Include="Views\Editor\_sampleInput-RovingEyes.cshtml" />
     <Content Include="Views\Editor\_sampleInput-TwelveBarBlues.cshtml" />
-    <Content Include="Views\Editor\_sampleOutput.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

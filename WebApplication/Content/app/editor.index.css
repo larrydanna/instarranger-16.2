@@ -6,7 +6,7 @@
 
 */
 
-#divInput > #input {
+#divInput > #textEditor {
     height: 800px;
 }
 
@@ -108,4 +108,9 @@
     padding: 20px;
     font-size: 16pt;
     font-family: "Coming Soon", cursive;
+}
+
+.song-notes-label {
+    font-weight: bold;
+    margin-right: 10px;
 }

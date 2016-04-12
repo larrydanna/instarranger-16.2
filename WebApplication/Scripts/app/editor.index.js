@@ -20,19 +20,15 @@
     }
 
     var doFormatting = function () {
+        var src = $('#textEditor').val();
 
-        var data = $('#input').val();
+        var song = new Song(src);
 
-        var formatter = new SongFormatterHtml(data);
-
-        var html = formatter.getOutput();
-
-        $('#divOutput').html(html);
-
+        $('#divOutput').html(song.toString());
     };
 
     var bindInputControls = function () {
-        $('#input').bind('keyup', null, function () {
+        $('#textEditor').bind('keyup', null, function () {
             setTimeout(function () {
                 doFormatting();
             }, 500);
@@ -45,4 +41,4 @@
 
     doFormatting();
 
-})(window, jQuery, EditorHelper);
+})(window, jQuery, window.EditorHelper);

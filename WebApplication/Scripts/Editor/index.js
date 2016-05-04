@@ -7,15 +7,10 @@
                                                       
  */
 
-(function (win, $, eh) {
+(function ($) {
 
     if (!$) {
         console.log("Big problem here... jQuery is not available");
-        return;
-    }
-
-    if (!eh) {
-        console.log("Big problem here... EditorHelper is not available");
         return;
     }
 
@@ -35,10 +30,8 @@
         });
     };
 
-    eh.say('App started');
-
     bindInputControls();
 
     doFormatting();
 
-})(window, jQuery, window.EditorHelper);
+})(jQuery);

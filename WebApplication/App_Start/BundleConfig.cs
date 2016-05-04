@@ -55,7 +55,7 @@ namespace WebApplication
                 "~/Scripts/app/SongFormatter.js",
                 "~/Scripts/app/Song.js",
                 "~/Scripts/app/editor.helper.js",
-                "~/Scripts/app/editor.index.js"
+                "~/Scripts/Editor/index.js"
                 ));
 
             bundles.Add(new StyleBundle("~/Content/editor").Include(

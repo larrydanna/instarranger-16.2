@@ -22,7 +22,6 @@ SongFormatter.prototype.toString = function () {
         .replace('{arrangement}', this.stanzas.join(''));
 };
 
-
 SongFormatter.prototype.getValue = function (key) {
     var obj = this.fields.find(i => i.key === key) || {};
     var retVal = obj.value || "";

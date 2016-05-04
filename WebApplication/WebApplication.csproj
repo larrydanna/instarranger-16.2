@@ -243,7 +243,7 @@
     <Content Include="Global.asax" />
     <Content Include="ScreenShots\160410a-instArranger-ScreenShot.PNG" />
     <Content Include="Scripts\app\editor.helper.js" />
-    <Content Include="Scripts\app\editor.index.js" />
+    <Content Include="Scripts\Editor\index.js" />
     <Content Include="Scripts\app\FieldsExtractor.js" />
     <Content Include="Scripts\app\Song.js" />
     <Content Include="Scripts\app\SongFormatter.js" />
@@ -275,6 +275,8 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <None Include="Properties\PublishProfiles\AWS.pubxml" />
+    <None Include="Properties\PublishProfiles\Azure %28CareSource%29.pubxml" />
+    <None Include="Properties\PublishProfiles\instarranger.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

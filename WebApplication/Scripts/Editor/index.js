@@ -21,15 +21,11 @@
         $('#divOutput').html(song.toString());
     };
 
-    var bindInputControls = function () {
-        $('#textEditor').bind('keyup', null, function () {
-            setTimeout(function () {
-                doFormatting();
-            }, 500);
-        });
-    };
-
-    bindInputControls();
+    $('#textEditor').bind('keyup', null, function () {
+        setTimeout(function () {
+            doFormatting();
+        }, 500);
+    });
 
     doFormatting();
 

@@ -6,13 +6,21 @@
 /____/\__/\__,_/_/ /_/ /___/\__,_/_/  /_/\___/\__,_/____/\__,_/_/   \___/_/    \____/_/  /_/ /_/ /_/\__,_/\__/\__/\___/_/     
                                                                                                                               
 */
-function StanzaMeasureFormatter(measure) {
-    this.measure = measure;
-};
+var namespace = namespace || {};
 
-StanzaMeasureFormatter.prototype.toString = function () {
+(function(ns) {
+    var module = ns["song"] = ns["song"] || {};
 
-    // TODO: Re-Visit this logic, add advanced measure formatting.
+    module.StanzaMeasureFormatter = function (measure) {
+        this.measure = measure;
+    };
 
-    return window.EditorHelper.div('song-sections-stanza-measure', this.measure);
-};
+    module.StanzaMeasureFormatter.prototype.toString = function () {
+
+        // TODO: Re-Visit this logic, add advanced measure formatting.
+
+        return namespace.html.div('song-sections-stanza-measure', this.measure);
+    };
+
+
+})(namespace);

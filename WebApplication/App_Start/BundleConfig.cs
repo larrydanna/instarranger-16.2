@@ -45,16 +45,17 @@ namespace WebApplication
             #region Custom Bundles
 
             bundles.Add(new ScriptBundle("~/bundles/editor").Include(
-                "~/Scripts/app/StringExtensions.js",
-                "~/Scripts/app/FieldsExtractor.js",
-                "~/Scripts/app/StanzaMeasureFormatter.js",
-                "~/Scripts/app/StanzaLineFormatter.js",
-                "~/Scripts/app/StanzaExtractor.js",
-                "~/Scripts/app/StanzaFormatter.js",
-                "~/Scripts/app/SongTemplateHtml.js",
-                "~/Scripts/app/SongFormatter.js",
-                "~/Scripts/app/Song.js",
-                "~/Scripts/app/editor.helper.js",
+                "~/Scripts/app/editor.namespace.js",
+                "~/Scripts/app/html.js",
+                "~/Scripts/app/song.StringExtensions.js",
+                "~/Scripts/app/song.FieldsExtractor.js",
+                "~/Scripts/app/song.StanzaMeasureFormatter.js",
+                "~/Scripts/app/song.StanzaLineFormatter.js",
+                "~/Scripts/app/song.StanzaExtractor.js",
+                "~/Scripts/app/song.StanzaFormatter.js",
+                "~/Scripts/app/song.SongTemplateHtml.js",
+                "~/Scripts/app/song.SongFormatter.js",
+                "~/Scripts/app/song.Song.js",
                 "~/Scripts/Editor/index.js"
                 ));
 

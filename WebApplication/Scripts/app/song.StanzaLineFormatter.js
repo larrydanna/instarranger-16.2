@@ -6,18 +6,25 @@
 /____/\__/\__,_/_/ /_/ /___/\__,_/_____/_/_/ /_/\___/_/    \____/_/  /_/ /_/ /_/\__,_/\__/\__/\___/_/     
                                                                                                           
 */
-function StanzaLineFormatter(line) {
-    this.line = line;
-};
+var namespace = namespace || {};
 
-StanzaLineFormatter.prototype.toString = function () {
+(function (ns) {
+    var module = ns["song"] = ns["song"] || {};
 
-    var measures = this.line.split(/\s+/);
+    module.StanzaLineFormatter = function (line) {
+        this.line = line;
+    };
 
-    var measuresFormatted = measures.map(m => new StanzaMeasureFormatter(m).toString());
+    module.StanzaLineFormatter.prototype.toString = function () {
 
-    var retVal = window.EditorHelper.div('song-sections-stanza-line', measuresFormatted.join(''));
+        var measures = this.line.split(/\s+/);
 
-    return retVal;
-};
+        var measuresFormatted = measures.map(m => new module.StanzaMeasureFormatter(m).toString());
+
+        var retVal = namespace.html.div('song-sections-stanza-line', measuresFormatted.join(''));
+
+        return retVal;
+    };
+
+})(namespace);
 

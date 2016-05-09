@@ -18,7 +18,7 @@ var namespace = namespace || {};
     };
 
     module.Song.prototype.formatItems = function (items, usrTxt, template) {
-        items.forEach(i => {
+        items.forEach(function (i) {
             var value = this.getValue(i, usrTxt);
             template = template.replace('{' + i + '}', value);
         });
@@ -32,7 +32,7 @@ var namespace = namespace || {};
 
         // Format the stanza's
         var stanzas = new module.StanzaExtractor(this.userInput, this.fieldNames).toArray();
-        var formattedStanzas = stanzas.map(s => new module.StanzaFormatter(s).toString());
+        var formattedStanzas = stanzas.map(function(s){new module.StanzaFormatter(s).toString()});
 
         var songFormatted = new module.SongFormatter(this.template, fields, formattedStanzas).toString();
 

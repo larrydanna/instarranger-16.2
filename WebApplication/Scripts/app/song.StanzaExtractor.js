@@ -18,9 +18,10 @@ var namespace = namespace || {};
     };
 
     module.StanzaExtractor.prototype.toArray = function () {
+        var self = this;
         this.parseSections();
 
-        var filteredList = this.list.filter(i => this.include(i));
+        var filteredList = this.list.filter(function (i) { return self.include(i); });
 
         return filteredList;
     };
@@ -36,7 +37,7 @@ var namespace = namespace || {};
     };
 
     module.StanzaExtractor.prototype.include = function (stanza) {
-        var retVal = this.ignoreList.every(i => stanza.toLowerCase().search(i.toLowerCase()) < 0);
+        var retVal = this.ignoreList.every(function (i) { return stanza.toLowerCase().search(i.toLowerCase()) < 0; });
         return retVal;
     };
 

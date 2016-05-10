@@ -18,7 +18,9 @@
 
         var song = new app.song.Song(src);
 
-        $('#divOutput').html(song.toString());
+        var html = song.toString();
+
+        $('#divOutput').html(html);
     };
 
     $('#textEditor').bind('keyup', null, function () {

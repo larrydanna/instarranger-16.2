@@ -32,7 +32,7 @@ var namespace = namespace || {};
 
         // Format the stanza's
         var stanzas = new module.StanzaExtractor(this.userInput, this.fieldNames).toArray();
-        var formattedStanzas = stanzas.map(function(s){new module.StanzaFormatter(s).toString()});
+        var formattedStanzas = stanzas.map(function(s){return new module.StanzaFormatter(s).toString()});
 
         var songFormatted = new module.SongFormatter(this.template, fields, formattedStanzas).toString();
 

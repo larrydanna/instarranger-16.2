@@ -19,7 +19,7 @@ var namespace = namespace || {};
 
         var measures = this.line.split(/\s+/);
 
-        var measuresFormatted = measures.map(m => new module.StanzaMeasureFormatter(m).toString());
+        var measuresFormatted = measures.map(function(m) { return new module.StanzaMeasureFormatter(m).toString(); });
 
         var retVal = namespace.html.div('song-sections-stanza-line', measuresFormatted.join(''));
 

@@ -28,7 +28,7 @@ var namespace = namespace || {};
     };
 
     module.SongFormatter.prototype.getValue = function (key) {
-        var obj = this.fields.find(i => i.key === key) || {};
+        var obj = this.fields.find(function(i) { return i.key === key; }) || {};
         var retVal = obj.value || "";
         return retVal;
     };

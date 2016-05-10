@@ -18,13 +18,13 @@ var namespace = namespace || {};
     module.StanzaFormatter.prototype.toString = function () {
         var lines = this.stanza
             .split('\n')
-            .filter(i => i.length > 0);
+            .filter(function (i) { return i.length > 0; });
 
         var label = lines.shift();
 
         var labelFormatted = this.getFormattedStanzaLabel(label);
 
-        var linesFormatted = lines.map(l => new module.StanzaLineFormatter(l).toString());
+        var linesFormatted = lines.map(function (l) { return new module.StanzaLineFormatter(l).toString() });
 
         var stanzaFormatted = namespace.html.div('song-sections-stanza', labelFormatted.concat(linesFormatted.join('')));
 

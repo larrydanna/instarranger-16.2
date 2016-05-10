@@ -16,15 +16,16 @@ var namespace = namespace || {};
         this.userInput = userInput;
     };
 
-    module.FieldsExtractor.prototype.toArray = function() {
-        var result = this.fieldNames.map(key => {
+    module.FieldsExtractor.prototype.toArray = function () {
+        var self = this;
+        var result = this.fieldNames.map(function(key) {
             var retVal = {};
 
             var regex = eval("/" + key + ": (.*)/i");
 
-            if (regex.test(this.userInput)) {
-                var value = this.userInput.match(regex)[1];
-                retVal = { key, value }
+            if (regex.test(self.userInput)) {
+                var value = self.userInput.match(regex)[1];
+                retVal = { "key": key, "value":value }
             }
 
             return retVal;
